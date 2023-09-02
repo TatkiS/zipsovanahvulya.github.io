@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Радіо "Зіпсована Хвиля"</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: linear-gradient(to right, hsl(0, 0%, 1%), #626285);
+            color: white;
+            text-align: center;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 1em;
+            border-bottom: 3px solid #eeeb2c;
+        }
+        header h1 {
+            font-size: 3em;
+            animation: slideInLeft ease-in-out 1s;
+        }
+        @keyframes slideInLeft {
+            from {
+                margin-left: -100%;
+                width: 300%; 
+            }
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+        audio {
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+        div {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Радіо "Зіпсована Хвиля"</h1>
+    </header>
+
+    <!-- Плеєр -->
+    <audio controls>
+        <source src="http://15404.cloudrad.io:9020/live?type=http&nocache=8" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Віджети -->
+    <div>
+        <h2>Поточна пісня: <span id="stream_info_song">Завантаження...</span></h2>
+        <h2>Назва потоку: <span id="stream_info_title">Завантаження...</span></h2>
+        <h2>Бітрейт: <span id="stream_info_bitrate">Завантаження...</span></h2>
+        <h2>Поточні слухачі: <span id="stream_info_listeners">Завантаження...</span></h2>
+        <h2>Максимальна кількість слухачів: <span id="stream_info_maxlisteners">Завантаження...</span></h2>
+        <h2>Статус джерела: <span id="stream_info_source">Завантаження...</span></h2>
+        <h2>Останні треки: <span id="stream_info_songhistory">Завантаження...</span></h2>
+    </div>
+
+    <!-- Сценарій для віджетів -->
+    <script language="javascript" type="text/javascript" src="https://cdn2.cloudrad.io/RadioZipsuvanaHvilya/live/streaminfo.js"></script>
+
+</body>
+</html>
